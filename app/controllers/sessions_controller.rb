@@ -28,7 +28,6 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(password)
       # ログイン成功
       session[:user_id] = @user.id
-      # session = { user_id: 1 }
       return true
     else
       # ログイン失敗
